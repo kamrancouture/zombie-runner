@@ -6,7 +6,8 @@
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="TowerDefenseTile226" type="Sprite" parent="."]
+[node name="rocket_launcher" type="Sprite" parent="."]
+rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -15,4 +16,4 @@ texture = ExtResource( 2 )
 wait_time = 0.5
 
 [node name="Bullet_spawn" type="Position2D" parent="."]
-position = Vector2( 0, -34 )
+position = Vector2( 41, 0 )
