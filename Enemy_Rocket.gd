@@ -11,7 +11,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	if is_instance_valid(player)
+	if is_instance_valid(player):
 		if get_angle_to(player.global_position) > 0:
 			rotate(deg2rad(homing_power))
 		elif get_angle_to(player.global_position) < 0:
