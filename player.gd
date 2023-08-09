@@ -6,11 +6,17 @@ var health = 100
 var can_shoot = true
 var speed = 500
 var velocity = Vector2.ZERO
-
+func _ready():
+	$TankBodyDark.show()
+	$TankDark.show()
+	$death.hide()
 func _physics_process(delta):
 	if health <= 0:
+		
+		$AnimationPlayer.play("death")
+		yield($AnimationPlayer , "animation_finished")
 		queue_free()
-	
+
 	
 	if Input.is_action_pressed("shoot") and can_shoot:
 		can_shoot = false
