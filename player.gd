@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var fire_rate = .25
 var Player_bullet = preload("res://player_bullet.tscn")
-var health = 10
+var health = 100
 var can_shoot = true
 var speed = 500
 var velocity = Vector2.ZERO
