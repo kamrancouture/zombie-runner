@@ -7,16 +7,17 @@ onready var player = get_parent().get_node("player")
 var Bullet = preload("res://Enemy_Rocket.tscn")
 
 func _physics_process(delta):
-	if health <= 0:
-		queue_free()
-	
-	look_at(player.global_position)
-	global_rotation - rad2deg(.5)
-	
-	if can_shoot:
-		can_shoot = false
-		shoot()
-		$fire_rate.start(fire_rate)
+	if is_instance_valid(player)
+		if health <= 0:
+			queue_free()
+		
+		look_at(player.global_position)
+		global_rotation - rad2deg(.5)
+		
+		if can_shoot:
+			can_shoot = false
+			shoot()
+			$fire_rate.start(fire_rate)
 
 
 func shoot():
