@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+var health = 10
 var can_shoot = true
 var fire_rate = 1
 onready var player = get_parent().get_node("player")
