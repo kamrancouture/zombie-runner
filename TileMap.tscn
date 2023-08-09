@@ -631,5 +631,4 @@
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource( 1 )
-cell_size = Vector2( 32, 32 )
 format = 1
