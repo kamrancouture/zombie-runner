@@ -1,6 +1,6 @@
 extends Area2D
 
-var damage = 5
+var damage = 25
 var homing_power = 1
 var speed = 7
 onready var player = get_parent().get_node("player")
