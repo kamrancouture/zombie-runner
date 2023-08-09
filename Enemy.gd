@@ -7,7 +7,7 @@ onready var player = get_parent().get_node("player")
 var Bullet = preload("res://Enemy_Rocket.tscn")
 
 func _physics_process(delta):
-	if is_instance_valid(player)
+	if is_instance_valid(player):
 		if health <= 0:
 			queue_free()
 		
