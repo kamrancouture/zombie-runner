@@ -11,12 +11,13 @@ func _ready():
 
 
 func _physics_process(delta):
-	if get_angle_to(player.global_position) > 0:
-		rotate(deg2rad(homing_power))
-	elif get_angle_to(player.global_position) < 0:
-		rotate(deg2rad(-homing_power))
-	
-	global_position += Vector2(speed , 0).rotated(rotation)
+	if is_instance_valid(player)
+		if get_angle_to(player.global_position) > 0:
+			rotate(deg2rad(homing_power))
+		elif get_angle_to(player.global_position) < 0:
+			rotate(deg2rad(-homing_power))
+		
+		global_position += Vector2(speed , 0).rotated(rotation)
 
 
 func _on_disippear_timer_timeout():
