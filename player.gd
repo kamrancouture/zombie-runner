@@ -8,6 +8,9 @@ var speed = 500
 var velocity = Vector2.ZERO
 
 func _physics_process(delta):
+	if health <= 0:
+		queue_free()
+	
 	
 	if Input.is_action_pressed("shoot") and can_shoot:
 		can_shoot = false
