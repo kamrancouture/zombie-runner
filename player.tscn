@@ -29,4 +29,9 @@ shape = SubResource( 1 )
 wait_time = 0.25
 one_shot = true
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+[node name="Camera2d" type="Camera2D" parent="."]
+current = true
+
 [connection signal="timeout" from="fire_rate" to="." method="_on_fire_rate_timeout"]
