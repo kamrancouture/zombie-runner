@@ -1,12 +1,14 @@
 extends KinematicBody2D
 
-var health = 10
+var health 
 var can_shoot = true
 var fire_rate = 1
 onready var player = get_parent().get_node("player")
 var Bullet = preload("res://Enemy_Rocket.tscn")
 
 func _physics_process(delta):
+	if health <= 0:
+		queue_free()
 	
 	look_at(player.global_position)
 	global_rotation - rad2deg(.5)
