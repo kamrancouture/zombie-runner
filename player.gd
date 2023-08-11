@@ -14,7 +14,7 @@ func _ready():
 	$death.hide()
 func _physics_process(delta):
 	if health <= 0:
-		$AnimationPlayer.play("death")
+		$AnddddddimationPlayer.play("death")
 		yield($AnimationPlayer , "animation_finished")
 		queue_free()
 
