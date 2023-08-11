@@ -1,18 +1,19 @@
 extends KinematicBody2D
 
+
 var fire_rate = .25
 var Player_bullet = preload("res://player_bullet.tscn")
 var health = 100
 var can_shoot = true
 var speed = 500
 var velocity = Vector2.ZERO
+
 func _ready():
 	$TankBodyDark.show()
 	$TankDark.show()
 	$death.hide()
 func _physics_process(delta):
 	if health <= 0:
-		
 		$AnimationPlayer.play("death")
 		yield($AnimationPlayer , "animation_finished")
 		queue_free()
