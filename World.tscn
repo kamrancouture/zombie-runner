@@ -18,7 +18,9 @@ position = Vector2( 231, 198 )
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 969, 203 )
 
+[node name="gas_droper" parent="." instance=ExtResource( 5 )]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-
-[node name="gas_droper" parent="." instance=ExtResource( 5 )]
+smoothing_enabled = true
+smoothing_speed = 12.0
