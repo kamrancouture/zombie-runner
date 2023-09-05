@@ -5,8 +5,11 @@ onready var bullet = get_parent().get_node("player_bullet")
 var damage = 80
 var health = 1
 var spawned = 10
+var Mine = preload("res://gas_dropper_mine.tscn")
 func _physics_process(delta):
-	print(spawned)
+	
+	
+	
 	
 	if health <= 0:
 		queue_free()
@@ -19,6 +22,7 @@ func _physics_process(delta):
 	
 	
 	if not Global.player_dead:
+		
 		
 		
 		
@@ -38,4 +42,13 @@ func _on_Area2D_body_entered(body):
 	spawned -= 1
 
 
+func spund_mine():
+	var mine = Mine.instance()
+	mine.global_position = $TankRedOutline.global_position
+	get_parent().add_child(mine)
 
+
+
+
+func _on_Timer_timeout():
+	spund_mine()
